@@ -6,7 +6,8 @@ shareButton.addEventListener('click', event => {
   if (navigator.share) { 
    navigator.share({
       title: 'WebShare API Demo',
-      url: 'https://codepen.io/ayoisaiah/pen/YbNazJ'
+      url: 'https://rococo-peony-421eea.netlify.app',
+      text: '안녕하세요!'
     }).then(() => {
       console.log('Thanks for sharing!');
     })
