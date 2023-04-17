@@ -1,6 +1,4 @@
 const shareButton = document.querySelector('.share-button');
-const shareDialog = document.querySelector('.share-dialog');
-const closeButton = document.querySelector('.close-button');
 
 shareButton.addEventListener('click', event => {
   if (navigator.share) { 
@@ -9,14 +7,10 @@ shareButton.addEventListener('click', event => {
       url: 'https://rococo-peony-421eea.netlify.app',
       text: '안녕하세요!'
     }).then(() => {
-      console.log('Thanks for sharing!');
+      alert('공유 완료!');
     })
     .catch(console.error);
     } else {
-        shareDialog.classList.add('is-open');
+      alert('공유하기가 불가합니다.');
     }
-});
-
-closeButton.addEventListener('click', event => {
-  shareDialog.classList.remove('is-open');
 });
